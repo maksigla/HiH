@@ -1,0 +1,75 @@
+#middle_container {
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.arrow {
+    fill: tomato;
+    float: left;
+    animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+#arrow-div {
+    width: 100vw;
+    margin-bottom: 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paragraph p {
+    font-size: 5vw;
+}
+
+#form-div {
+    width: 100vw;
+    margin-top: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#form-div p {
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-div form label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#form-div label {
+    color: white;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }

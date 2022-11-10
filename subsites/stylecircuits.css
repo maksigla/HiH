@@ -1,0 +1,48 @@
+#middle_container {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.circuit-div {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-div {
+    width: 100%;
+    height: 10vw;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-div img {
+    margin-top: 0vw;
+
+}
+
+.logo-div p {
+    margin-top: 0vw;
+    font-size: 3vw;
+}
+
+.circuit-img {    
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuit-img img {
+    margin-top: 0vw;
+    width: 55vw;
+    margin-bottom: 5vw;
+}
+
+.logo {
+    width: 10vw;
+    margin: 2vw;
+    border-radius: 10px;
+}
