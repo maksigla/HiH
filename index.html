@@ -10,13 +10,13 @@
   <body style="background-color:#000000">
     <div class="wrapper">
       <div id="top_bar">
-        <div id="car_logo">
+        <nav id="car_logo">
           <a href="index.html"><img src="images/bruh.png" alt="car"></a>
-        </div>
+        </nav>
         <div class="top_menu">
           <ul>
-            <li class="active" id="drivers-href"><button class="dropbtn"><h4>Drivers</h4></button>
-              <div class="sub-menu-1">
+            <li class="active" id="drivers-href"><button class="dropbtn"><b>Drivers</b></button>
+              <nav class="fix-sub-menu2">
                 <ul class="list-text">
                   <li><a href="subsites/verstappen.html"><b>Max Verstappen</b></a></li>
                   <li><a href="subsites/perez.html"><b>Sergio Perez</b></a></li>
@@ -39,10 +39,10 @@
                   <li><a href="subsites/albon.html"><b>Alexander Albon</b></a></li>
                   <li><a href="subsites/latifi.html"><b>Nicholas Latifi</b></a></li>
                 </ul>
-              </div>
+              </nav>
             </li>
-            <li class="active"><button class="dropbtn"><h4>Teams</h4></button>
-              <div class="sub-menu-1">
+            <li class="active"><button class="dropbtn"><b>Teams</b></button>
+              <nav class="fix-sub-menu2">
                 <ul class="list-text">
                   <li><a href="subsites/redbull.html"><b>Red Bull</b></a></li>
                   <li><a href="subsites/ferrari.html"><b>Ferrari</b></a></li>
@@ -55,28 +55,26 @@
                   <li><a href="subsites/haas.html"><b>Haas</b></a></li>
                   <li><a href="subsites/williams.html"><b>Williams</b></a></li>
                 </ul>
-              </div>
+              </nav>
             </li>
-            <li class="active"><a href="subsites/circuits.html"><button class="dropbtn"><h4>Circuits</h4></button></a>
+            <li class="active"><div class="dropbtn"><a href="subsites/circuits.html"><b>Circuits</b></a></div>
               
             </li>
-            <li><a href="subsites/champions.html"><button class="dropbtn"><h4>Your vote</h4></button></a></li>
+            <li><div class="dropbtn"><a href="subsites/your-vote.html"><b>Your vote</b></a></div></li>
           </ul>
         </div>
       </div>
-      <div id="middle_container">
-        <section id="section1">
+      <div id="middle_container" class="middle_container_menu">
           <img src="images/redbullhonda.jpg" alt="" id="background-img">
-          <div class="centered"><b>Formula 1</b></div>
-          <div class="button-explore">
-            <a href="https://en.wikipedia.org/wiki/Formula_One" target="_blank"><button class="btn1"><b>EXPLORE</b></button></a>
-          </div>
-        </section>
+          <header class="centered"><b>Formula 1</b></header>
+          <nav class="button-explore">
+            <div class="btn1"><a href="https://en.wikipedia.org/wiki/Formula_One" target="_blank"><b>EXPLORE</b></a></div>
+          </nav>
       </div>
 
-      <div id="footer">
+      <footer id="footer">
         <h4 id="fullname">Maksymilian Igla, 193093</h4>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
