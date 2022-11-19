@@ -1,0 +1,90 @@
+<!ELEMENT hipertext (author, menu, drivers, teams, circuits)>
+<!ATTLIST hipertext xmlns:xsi CDATA "http://www.w3.org/2001/XMLSchema-instance">
+<!ATTLIST hipertext xsi:noNamespaceSchemaLocation CDATA "index.xsd">
+
+<!ELEMENT author (fname, lname)>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+
+<!ELEMENT menu (logo, menuvalues)>
+<!ELEMENT logo EMPTY>
+<!ATTLIST logo source CDATA #IMPLIED>
+<!ELEMENT menuvalues (#PCDATA)*>
+
+<!ELEMENT drivers (driver)*>
+
+<!ELEMENT driver (name, lastname, descriptiondriver, biography, image, gallery, scrollup)>
+<!ATTLIST driver young (yes | no) #REQUIRED>
+<!ATTLIST driver european (yes | no) #REQUIRED>
+<!ATTLIST driver number-1-driver (One | Two | 1 | 2) #IMPLIED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT descriptiondriver (dteam, nationality, podiums, points, grandprixentered, worldchampionships, highestracefinish, highestgridposition, birthday, placeofbirth)>
+<!ELEMENT biography (#PCDATA)>
+<!ELEMENT image (link, imagedescription)>
+<!ELEMENT gallery (link)*>
+<!ELEMENT scrollup (#PCDATA)>
+
+<!ELEMENT dteam (#PCDATA)>
+<!ELEMENT nationality (#PCDATA)>
+<!ELEMENT podiums (#PCDATA)>
+<!ELEMENT points (#PCDATA)>
+<!ELEMENT grandprixentered (#PCDATA)>
+<!ELEMENT worldchampionships (#PCDATA)>
+<!ELEMENT highestracefinish (#PCDATA)>
+<!ELEMENT highestgridposition (#PCDATA)>
+<!ELEMENT birthday (#PCDATA)>
+
+<!ELEMENT placeofbirth (drivercity, drivercountry)>
+<!ELEMENT drivercity (#PCDATA)>
+<!ELEMENT drivercountry (#PCDATA)>
+
+<!ELEMENT link EMPTY>
+<!ATTLIST link source CDATA "subsites/images/verstappen.jpeg">
+
+<!ELEMENT imagedescription (#PCDATA)>
+
+<!ATTLIST link source CDATA "subsites/images/ver1.jpeg">
+<!ATTLIST link source CDATA "subsites/images/ver2.jpeg">
+<!ATTLIST link source CDATA "subsites/images/ver3.jpeg">
+
+<!ENTITY scroll "Top of the page">
+
+<!ELEMENT teams (team)*>
+<!ELEMENT team (descriptionteam, inprofile, yearprofile, officialmercendise, resultarchive, imageteam)>
+<!ATTLIST team new (yes | no) #IMPLIED>
+
+<!ELEMENT descriptionteam (fullteamname, base, teamchief, technicalchief, chassis, powerunit, firstteamentry, worldteamchampionships, highestracefinish, teampolepositions, fastestlaps)>
+
+<!ELEMENT fullteamname (#PCDATA)>
+<!ELEMENT base (city, country)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT teamchief (#PCDATA)>
+<!ELEMENT technicalchief (#PCDATA)>
+<!ELEMENT chassis (#PCDATA)>
+<!ELEMENT powerunit (#PCDATA)>
+<!ELEMENT firstteamentry (#PCDATA)>
+<!ELEMENT worldteamchampionships (#PCDATA)>
+<!ELEMENT teampolepositions (#PCDATA)>
+<!ELEMENT fastestlaps (#PCDATA)>
+
+<!ELEMENT inprofile (#PCDATA)*>
+<!ELEMENT yearprofile (#PCDATA)*>
+<!ELEMENT officialmercendise (#PCDATA)*>
+<!ELEMENT resultarchive (#PCDATA)*>
+<!ELEMENT imageteam (link)>
+
+<!ENTITY result "Result Archive">
+
+<!ELEMENT circuits (circuit)*>
+<!ELEMENT circuit (circuitname, circuitcountryimage, circuitimage)>
+<!ATTLIST circuit highdownforce (yes | no) #IMPLIED>
+<!ATTLIST circuit european (yes | no) #IMPLIED>
+<!ATTLIST circuit circuitid CDATA #IMPLIED>
+<!ATTLIST circuit long (yes | no) #IMPLIED>
+
+<!ELEMENT circuitname (#PCDATA)>
+<!ELEMENT circuitcountryimage (link)>
+<!ELEMENT circuitimage (link)>

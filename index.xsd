@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+<xs:element name="hipertext" type="hipertextType"/>  
+
+<xs:complexType name="hipertextType">
+	<xs:sequence>
+		<xs:element name="author" type="authorType" minOccurs="1" maxOccurs="1"></xs:element>
+        <xs:element name="menu" type="menuType" minOccurs="1" maxOccurs="1"></xs:element>
+        <xs:element name="drivers" type="driversType" minOccurs="1" maxOccurs="1"></xs:element>
+        <xs:element name="teams" type="teamsType" minOccurs="1" maxOccurs="1"></xs:element>
+        <xs:element name="circuits" type="circuitsType" minOccurs="1" maxOccurs="1"></xs:element>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authorType">
+    <xs:sequence>
+        <xs:element name="fname" type="xs:string"></xs:element>
+        <xs:element name="lname" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="menuType">
+    <xs:sequence>
+        <xs:element name="logo" type="logoType"></xs:element>
+        <xs:element name="menuvalues" type="menulist"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoType">
+    <xs:attribute name="source" type="xs:string"></xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="driversType">
+    <xs:sequence>
+        <xs:element name="driver" type="driverType" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="teamsType">
+    <xs:sequence>
+        <xs:element name="team" type="teamType" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="circuitsType">
+    <xs:sequence>
+        <xs:element name="circuit" maxOccurs="unbounded">
+            <xs:complexType>
+                <xs:all>
+                    <xs:element name="circuitname" type="xs:string"></xs:element>
+                    <xs:element name="circuitcountryimage" type="circuitcountryimageType"></xs:element>
+                    <xs:element name="circuitimage" type="circuitimageType"></xs:element>
+                </xs:all>
+                <xs:attributeGroup ref="circuitAttributes"></xs:attributeGroup>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="driverType">
+    <xs:sequence>
+        <xs:element name="name" type="string20"></xs:element>
+        <xs:element name="lastname" type="string40"></xs:element>
+        <xs:element name="descriptiondriver" type="driverdescriptionType"></xs:element>
+        <xs:element name="biography" type="xs:string"></xs:element>
+        <xs:element name="image" type="imageType" minOccurs="1" maxOccurs="1"></xs:element>
+        <xs:element name="gallery" type="galleryType"></xs:element>
+        <xs:element name="scrollup" type="xs:string"></xs:element>
+    </xs:sequence>
+    <xs:attribute ref="young" use="required"></xs:attribute>
+    <xs:attribute ref="european" use="required"></xs:attribute>
+    <xs:attribute ref="number-1-driver" use="optional"></xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="teamType">
+    <xs:sequence>
+        <xs:element name="descriptionteam" type="teamdescriptionType"></xs:element>
+        <xs:element name="inprofile" type="xs:string"></xs:element>
+        <xs:element name="yearprofile" type="xs:anyURI" minOccurs="0"></xs:element>
+        <xs:element name="officialmercendise" type="xs:anyURI"></xs:element>
+        <xs:element name="resultarchive" type="xs:anyURI"></xs:element>
+        <xs:element name="imageteam" type="imageteamType"></xs:element>
+    </xs:sequence>
+    <xs:attribute ref="new" use="optional"></xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="driverdescriptionType">
+    <xs:sequence>
+        <xs:element name="dteam" type="xs:string"></xs:element>
+        <xs:element name="nationality" type="xs:string"></xs:element>
+        <xs:element name="podiums" type="xs:string"></xs:element>
+        <xs:element name="points" type="xs:float"></xs:element>
+        <xs:element name="grandprixentered" type="xs:int"></xs:element>
+        <xs:element name="worldchampionships" type="xs:string"></xs:element>
+        <xs:element name="highestracefinish" type="xs:string"></xs:element>
+        <xs:element name="highestgridposition" type="xs:string"></xs:element>
+        <xs:element name="birthday" type="xs:string"></xs:element>
+        <xs:element name="placeofbirth" type="placeofbirthType"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="teamdescriptionType">
+    <xs:sequence>
+        <xs:element name="fullteamname" type="xs:string"></xs:element>
+        <xs:element name="base" type="baseType"></xs:element>
+        <xs:element name="teamchief" type="xs:string"></xs:element>
+        <xs:element name="technicalchief" type="xs:string"></xs:element>
+        <xs:element name="chassis" type="xs:string"></xs:element>
+        <xs:element name="powerunit" type="xs:string"></xs:element>
+        <xs:element name="firstteamentry" type="xs:gYear"></xs:element>
+        <xs:element name="worldteamchampionships" type="xs:string"></xs:element>
+        <xs:element name="highestracefinish" type="xs:string"></xs:element>
+        <xs:element name="teampolepositions" type="xs:string"></xs:element>
+        <xs:element name="fastestlaps" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="placeofbirthType">
+    <xs:sequence>
+        <xs:element name="drivercity" type="xs:string"></xs:element>
+        <xs:element name="drivercountry" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+
+<xs:complexType name="baseType">
+    <xs:sequence>
+        <xs:element name="city" type="xs:string"></xs:element>
+        <xs:element name="country" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imageType">
+    <xs:sequence>
+        <xs:element ref="link"></xs:element>
+        <xs:element name="imagedescription" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imageteamType">
+    <xs:sequence>
+        <xs:element ref="link"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="galleryType">
+    <xs:sequence>
+        <xs:element ref="link" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="circuitcountryimageType">
+    <xs:all>
+        <xs:element ref="link" minOccurs="1" maxOccurs="1"></xs:element>
+    </xs:all>
+</xs:complexType>
+
+<xs:complexType name="circuitimageType">
+    <xs:all>
+        <xs:element ref="link" minOccurs="1" maxOccurs="1">
+            
+        </xs:element>
+    </xs:all>
+</xs:complexType>
+
+<xs:simpleType name="string20">
+    <xs:restriction base="xs:string">
+        <xs:minLength value="1"></xs:minLength>
+        <xs:maxLength value="20"></xs:maxLength>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="string40">
+    <xs:restriction base="xs:string">
+        <xs:minLength value="1"></xs:minLength>
+        <xs:maxLength value="40"></xs:maxLength>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="intid">
+    <xs:restriction base="xs:int">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="23"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="menulist">
+    <xs:list itemType="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="derivedlistofmenu">
+    <xs:restriction base="menulist">
+        <xs:length value="4"></xs:length>
+    </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="listofmenurestrictions">
+    <xs:restriction base="menulist">
+        <xs:enumeration value="Drivers"></xs:enumeration>
+        <xs:enumeration value="Teams"></xs:enumeration>
+        <xs:enumeration value="Cicuits"></xs:enumeration>
+        <xs:enumeration value="Yourvote"></xs:enumeration>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:attribute name="number-1-driver">
+    <xs:simpleType>
+        <xs:union memberTypes="xs:string xs:int">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="One"></xs:enumeration>
+                    <xs:enumeration value="Two"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:int">
+                    <xs:enumeration value="1"></xs:enumeration>
+                    <xs:enumeration value="2"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="young">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"></xs:enumeration>
+            <xs:enumeration value="no"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="european">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"></xs:enumeration>
+            <xs:enumeration value="no"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="new">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"></xs:enumeration>
+            <xs:enumeration value="no"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="long">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attributeGroup name="circuitAttributes">
+    <xs:attribute name="highdownforce">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="yes"></xs:enumeration>
+                <xs:enumeration value="no"></xs:enumeration>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute ref="european"></xs:attribute>
+    <xs:attribute name="circuitid" type="intid"></xs:attribute>
+    <xs:attribute ref="long"></xs:attribute>
+</xs:attributeGroup>
+
+<xs:attribute name="source" type="xs:string"></xs:attribute>
+
+<xs:element name="link">
+    <xs:complexType>
+        <xs:attribute ref="source"></xs:attribute>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>
