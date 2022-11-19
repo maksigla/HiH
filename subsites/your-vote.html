@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="your-vote.css  ">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOJE HOBBY - FORMULA 1</title>
+  </head>
+  <body style="background-color:#000000">
+    <div class="wrapper">
+      <div id="top_bar">
+        <nav id="car_logo">
+          <a href="../index.html"><img src="images/bruh.png" alt="car"></a>
+        </nav>
+        <div class="top_menu">
+          <ul>
+            <li class="active" id="drivers-href"><div class="dropbtn"><b>Drivers</b></div>
+              <nav class="fix-sub-menu">
+                <ul class="list-text">
+                  <li><a href="verstappen.html"><b>Max Verstappen</b></a></li>
+                  <li><a href="perez.html"><b>Sergio Perez</b></a></li>
+                  <li><a href="leclerc.html"><b>Charles Leclerc</b></a></li>
+                  <li><a href="sainz.html"><b>Carlos Sainz</b></a></li>
+                  <li><a href="hamilton.html"><b>Lewis Hamilton</b></a></li>
+                  <li><a href="russell.html"><b>George Russell</b></a></li>
+                  <li><a href="norris.html"><b>Lando Norris</b></a></li>
+                  <li><a href="ricciardo.html"><b>Daniel Ricciardo</b></a></li>
+                  <li><a href="alonso.html"><b>Fernando Alonso</b></a></li>
+                  <li><a href="ocon.html"><b>Esteban Ocon</b></a></li>
+                  <li><a href="gasly.html"><b>Pierre Gasly</b></a></li>
+                  <li><a href="tsunoda.html"><b>Yuki Tsunoda</b></a></li>
+                  <li><a href="bottas.html"><b>Valtteri Bottas</b></a></li>
+                  <li><a href="zhou.html"><b>Guanyu Zhou</b></a></li>
+                  <li><a href="vettel.html"><b>Sebastian Vettel</b></a></li>
+                  <li><a href="stroll.html"><b>Lance Stroll</b></a></li>
+                  <li><a href="magnussen.html"><b>Kevin Magnussen</b></a></li>
+                  <li><a href="schumacher.html"><b>Mick Schumacher</b></a></li>
+                  <li><a href="albon.html"><b>Alexander Albon</b></a></li>
+                  <li><a href="latifi.html"><b>Nicholas Latifi</b></a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="active"><div class="dropbtn"><b>Teams</b></div>
+              <nav class="fix-sub-menu">
+                <ul class="list-text">
+                  <li><a href="redbull.html"><b>Red Bull</b></a></li>
+                  <li><a href="ferrari.html"><b>Ferrari</b></a></li>
+                  <li><a href="mercedes.html"><b>Mercedes</b></a></li>
+                  <li><a href="mclaren.html"><b>McLaren</b></a></li>
+                  <li><a href="alpine.html"><b>Alpine</b></a></li>
+                  <li><a href="alphatauri.html"><b>Alpha Tauri</b></a></li>
+                  <li><a href="alfaromeo.html"><b>Alfa Romeo</b></a></li>
+                  <li><a href="astonmartin.html"><b>Aston Martin</b></a></li>
+                  <li><a href="haas.html"><b>Haas</b></a></li>
+                  <li><a href="williams.html"><b>Williams</b></a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="active"><a href="circuits.html"><div class="dropbtn"><b>Circuits</b></div></a>
+              
+            </li>
+            <li><a href="your-vote.html"><div class="dropbtn"><b>Your vote</b></div></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="middle_container">
+            <div id="paragraph"> 
+                <p><b>SHARE WITH US!</b></p>
+            </div>
+            <div id="arrow-div">
+                <svg width="60" height="60" class="arrow">
+                    <path d="M 0 0 L 30 60 L 60 0 L 50 0 L 30 40 L 10 0 L 0 0"></path>        
+                </svg>
+            </div>  
+          
+            <div id="form-div">
+                <form>
+                    <p><b>Type your name:</b></p>
+                    <br/>
+                    <div class="label-div">
+                        <label for="fname">First name: &nbsp;</label><br/>
+                        <input type="text" id="fname" name="fname" required><br/><br/>
+                    </div>
+                    <div class="label-div">
+                        <label for="lname">Last name: &nbsp;</label><br/>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+                    <br/><br/>
+                    <p><b>Choose your sex:</b></p>
+                    <br/>
+                    <div class="label-div">
+                        <input type="radio" id="male" name="sex" value="MALE" required>
+                        <label for="male">Male &nbsp;</label><br/><br/>
+                    </div>
+                    <div class="label-div">
+                        <input type="radio" id="female" name="sex" value="FEMALE">
+                        <label for="female">Female &nbsp;</label><br/>
+                    </div>
+                    <br/>
+                    <p><b>Choose your favourite team</b></p>
+                    <div class="label-div">
+                        <label for="fav-team">Favourite team: &nbsp;</label><br/>
+                        <input list="fav-team2" required id="fav-team"/>
+                        <datalist id="fav-team2">
+                            <option value="Red Bull"></option>
+                            <option value="Ferrari"></option>
+                            <option value="Mercedes"></option>
+                            <option value="McLaren"></option>
+                            <option value="Alpine"></option>
+                            <option value="AlphaTauri"></option>
+                            <option value="Alfa Romeo"></option>
+                            <option value="Aston Martin"></option>
+                            <option value="Haas"></option>
+                            <option value="Williams"></option>
+                        </datalist>
+                    </div>
+                    <br/><br/>
+                    <p><b>Type your favourite driver</b></p>
+                    <br/>
+                    <div class="label-div">
+                        <label for="driver">Favourite driver: &nbsp;</label><br/><br/>
+                        <input type="text" id="driver" name="driver" required><br/><br/><br/>
+                    </div>
+                    <p><b>What is your favourite type of track?:</b></p>
+                    <div class="label-div">
+                        <input type="checkbox" id="type1" name="type1" value="high">
+                        <label for="type1">High-Downforce &nbsp;</label><br/><br/>
+                    </div>
+                    <div class="label-div">
+                        <input type="checkbox" id="type2" name="type2" value="low">
+                        <label for="type2">Low-Downforce &nbsp;</label><br/><br/>
+                    </div>
+                    <div class="label-div">
+                        <input type="checkbox" id="type3" name="type3" value="medium">
+                        <label for="type3">Medium-Downforce &nbsp;</label><br/><br/>
+                    </div>
+                    <br/><br/>
+
+                    <p><b>Have you ever been to the F1 race?</b></p>
+                    <div class="label-div">
+                        <input type="radio" id="been" name="yes" value="YES" required>
+                        <label for="been">Yes &nbsp;</label><br/><br/>
+                    </div>
+                    <div class="label-div">
+                        <input type="radio" id="nobeen" name="no" value="NO">
+                        <label for="nobeen">No &nbsp;</label>
+                    </div>
+                    <br/><br/>
+                    
+                    <p><b>When did you find out about Formula 1?</b></p>
+                    <div class="label-div">
+                        <input type="number" min="1950" max="2022" step="1" value="2022" id="when"/>
+                        <label for="when">Choose a year: &nbsp;</label><br/><br/>
+                    </div>
+                    <br/><br/>
+                    <div class="label-div">
+                        <input type="submit">
+                        <input type="reset">
+                    </div>
+                    <br/><br/><br/><br/>
+                </form>
+            </div>
+      </div>
+
+      <footer id="footer">
+        <h4 id="fullname">Maksymilian Igla, 193093</h4>
+      </footer>
+    </div>
+  </body>
+</html>

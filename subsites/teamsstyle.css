@@ -11,7 +11,7 @@
 }
 
 .text-teams {
-    left: 60%;
+    left: 65%;
 }
 
 .div-table p b {
@@ -71,4 +71,19 @@
     left: 5%;
     float: none;
     position: absolute;
+    margin-top: 2vw;
 }
+
+.div-table-teams:hover table{
+    background-color: chocolate;
+}
+
+.div-table-teams tr th {
+    font-size: 1.4vw;
+}
+
+@media only screen and (max-height: 600px){
+    .div-table-teams {
+        display: none;
+    }
+  }

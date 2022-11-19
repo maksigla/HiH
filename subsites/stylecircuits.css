@@ -1,4 +1,5 @@
 #middle_container {
+    height: 75%;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -19,8 +20,8 @@
 
 .logo-div img {
     margin-top: 0vw;
-
 }
+
 
 .logo-div p {
     margin-top: 0vw;
@@ -46,3 +47,12 @@
     margin: 2vw;
     border-radius: 10px;
 }
+
+.logo {
+    transition: transform 0.75s;
+}
+
+.logo:hover {
+    transform: scale(1.3);
+}
+
