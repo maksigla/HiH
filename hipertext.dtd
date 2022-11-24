@@ -41,13 +41,13 @@
 <!ELEMENT drivercountry (#PCDATA)>
 
 <!ELEMENT link EMPTY>
-<!ATTLIST link source CDATA "subsites/images/verstappen.jpeg">
+<!ATTLIST link source CDATA #REQUIRED">
 
 <!ELEMENT imagedescription (#PCDATA)>
 
-<!ATTLIST link source CDATA "subsites/images/ver1.jpeg">
-<!ATTLIST link source CDATA "subsites/images/ver2.jpeg">
-<!ATTLIST link source CDATA "subsites/images/ver3.jpeg">
+<!ATTLIST link source CDATA #REQUIRED>
+<!ATTLIST link source CDATA #REQUIRED>
+<!ATTLIST link source CDATA #REQUIRED>
 
 <!ENTITY scroll "Top of the page">
 
